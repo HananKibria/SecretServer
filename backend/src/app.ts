@@ -7,7 +7,7 @@ const express = require('express');
 const app = express();
 const cors = require("cors");
 var cfg = require("../config.json")[process.env.NODE_ENV];
-
+const path = require('path');
 async function createMongoConnection() {
     // const conStr = `mongodb://${username}:${password}@${clusterendpoint}:${mongoDbPort}/${mongoDbName}?replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false`;
     // console.log('conStr: ', conStr);
@@ -27,6 +27,12 @@ async function createMongoConnection() {
         allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
       }),
     );
+    app.use(express.static(path.join(__dirname, 'build')));
+
+
+    app.get('/*', (req:any, res:any) => {
+      res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    });
 
     try {
       await createMongoConnection();
