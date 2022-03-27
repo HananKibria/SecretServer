@@ -18,8 +18,8 @@
   "scripts": {
     "build": "tsc -b",
     "start": "tsc -b && nodemon ./dist/app.js",
-    "postinstall": "npm run typings",
-    "typings": "typings install",
+    "postinstall": "npm run webpack",
+   "webpack": "webpack",
     "format": "prettier --write \"src/**/*.ts\""
   },
   "lint-staged": {
