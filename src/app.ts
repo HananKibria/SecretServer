@@ -22,7 +22,7 @@ async function createMongoConnection() {
     app.use(
       //cors()
       cors({
-        origin: cfg.frontend_BaseURL,
+        origin: '*',
         credentials: true,
         allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
       }),
