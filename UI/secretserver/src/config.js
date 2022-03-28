@@ -6,4 +6,4 @@ const Url = {
     //production:"http://localhost:5000"
 };
 
-export const SERVER_URL = Url[process.env.REACT_APP_ENV];
+export const SERVER_URL = Url["production"];

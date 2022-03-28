@@ -19,6 +19,8 @@
     "typings": "^2.1.1",
     "webpack": "^5.70.0"
   },
+  "homepage":".",
+
   "scripts": {
     "build": "tsc -b",
     "start": "tsc -b && nodemon ./dist/app.js",

@@ -37,9 +37,9 @@ function createMongoConnection() {
         credentials: true,
         allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
     }));
-    app.use(express.static(path.join(__dirname, 'build')));
+    app.use(express.static(path.join(__dirname, '../UI/secretserver/build')));
     app.get('/*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'build', 'index.html'));
+        res.sendFile(path.join(__dirname, '../UI/secretserver/build', 'index.html'));
     });
     try {
         yield createMongoConnection();

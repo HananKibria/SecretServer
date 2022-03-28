@@ -27,7 +27,7 @@ async function createMongoConnection() {
         allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
       }),
     );
-    app.use(express.static(path.join(__dirname, 'build')));
+    app.use(express.static(path.join(__dirname, '../UI/secretserver/build')));
 
 
     app.get('/*', (req:any, res:any) => {
