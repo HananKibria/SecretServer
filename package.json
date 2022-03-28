@@ -11,6 +11,7 @@
     "express": "^4.17.3",
     "mongodb": "^4.4.1",
     "mongoose": "^6.2.8",
+    "nodemon": "^2.0.15",
     "postinstall": "^0.7.4",
     "process": "^0.11.10",
     "random-hash": "^4.0.1",
