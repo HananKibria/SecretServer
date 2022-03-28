@@ -30,7 +30,7 @@ async function createMongoConnection() {
     app.use(express.static(path.join(__dirname, '../UI/secretserver/build')));
 
 
-    app.get('/', (req:any, res:any) => {
+    app.get('/','/getsecret', (req:any, res:any) => {
       res.sendFile(path.join(__dirname, '../UI/secretserver/build', 'index.html'));
     });
 
