@@ -38,7 +38,7 @@ function createMongoConnection() {
         allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
     }));
     app.use(express.static(path.join(__dirname, '../UI/secretserver/build')));
-    app.get('/', '/getsecret', (req, res) => {
+    app.get(['/', '/getsecret'], (req, res) => {
         res.sendFile(path.join(__dirname, '../UI/secretserver/build', 'index.html'));
     });
     try {
