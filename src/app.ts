@@ -38,7 +38,7 @@ async function createMongoConnection() {
       await createMongoConnection();
       app.use(bodyParser.json({ limit: '1500mb', extended: true }));
       app.use(bodyParser.urlencoded({ limit: '1500mb', extended: true }));
-      const port=5000;
+      const port=process.env.PORT || 5000;
       let secretAPI = require("./routes/api/secret");
       app.use("", secretAPI);
       const server = app.listen(port, (req:any) => {
