@@ -13,13 +13,14 @@
     "postinstall": "^0.7.4",
     "process": "^0.11.10",
     "random-hash": "^4.0.1",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.3",
+    "webpack": "^5.70.0"
   },
   "scripts": {
     "build": "tsc -b",
     "start": "tsc -b && nodemon ./dist/app.js",
     "postinstall": "npm run webpack",
-   "webpack": "webpack",
+    "webpack": "webpack",
     "format": "prettier --write \"src/**/*.ts\""
   },
   "lint-staged": {
