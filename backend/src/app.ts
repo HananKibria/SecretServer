@@ -27,12 +27,7 @@ async function createMongoConnection() {
         allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
       }),
     );
-    app.use(express.static(path.join(__dirname, 'build')));
 
-
-    app.get('/*', (req:any, res:any) => {
-      res.sendFile(path.join(__dirname, 'build', 'index.html'));
-    });
 
     try {
       await createMongoConnection();
